@@ -107,9 +107,9 @@
                 $result = pg_query($db, $query);
                 while($row = pg_fetch_assoc($result)){
                   echo "<tr>";
-                  echo "<td>".$row['nro_documento']."</td>";
+                  echo "<td>".$row['documento']."</td>";
                   echo "<td>".$row['nombre']."</td>";
-                  echo "<td>".$row['apellidos']."</td>";
+                  echo "<td>".$row['apellido']."</td>";
                   echo "<td>".$row['direccion']."</td>";
                   echo "<td>".$row['celular']."</td>";
                   echo "</tr>";
