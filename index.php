@@ -85,6 +85,42 @@
         </div>
       </footer>
     </div>
+    <div class="listado_datos">
+      <div class="card">
+        <div class="card-body">
+          <h3>Listado de Datos</h3>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Nro Documento</th>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Direccion</th>
+                <th>Celular</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php
+                include "conexion.php";
+                $db = conexion();
+                $query = "SELECT * FROM datos";
+                $result = pg_query($db, $query);
+                while($row = pg_fetch_assoc($result)){
+                  echo "<tr>";
+                  echo "<td>".$row['nro_documento']."</td>";
+                  echo "<td>".$row['nombre']."</td>";
+                  echo "<td>".$row['apellidos']."</td>";
+                  echo "<td>".$row['direccion']."</td>";
+                  echo "<td>".$row['celular']."</td>";
+                  echo "</tr>";
+                }
+              ?>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
 
 
     <!-- Bootstrap core JavaScript
