@@ -103,7 +103,7 @@
               <?php
                 include "conexion.php";
                 $db = conexion();
-                $query = "SELECT * FROM datos";
+                $query = "SELECT * FROM persona";
                 $result = pg_query($db, $query);
                 while($row = pg_fetch_assoc($result)){
                   echo "<tr>";
